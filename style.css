@@ -1,0 +1,260 @@
+body{
+    font-family: serif;
+    background: #000000;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex_row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flex_col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.view{
+    min-height: 100vh;
+    position: relative;
+    background: url(./images/back.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0rem 5rem 10rem rgba(0,0,0,0.6), inset 0rem 5rem 10rem rgba(0,0,0,0.6);
+}
+
+.nav{
+    min-height: 10vh;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.nav .logo a{
+    font-size: 1.6rem;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.nav .list a{
+    padding: 0 2rem;
+    margin-left: 3rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+}
+
+.burger{
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+}
+
+.burger > div{
+    width: 35px;
+    height: 3px;
+    background: #fff;
+}
+
+.line1{
+    transform: translateY(-4px);
+}
+
+.line3{
+    transform: translateY(4px);
+}
+
+.explore{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.explore h2{
+    text-transform: capitalize;
+    font-size: 4.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(7, 250, 250);
+}
+
+.explore p{
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    color: yellow;
+    text-transform: capitalize;
+}
+
+.types{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+}
+
+.views{
+    width: 400px;
+    height: 600px;
+    border-radius: 1rem;
+    margin: .5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.views img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+}
+
+.views img:hover{
+    transform: scale(1);
+}
+
+.dets{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease-in-out;
+}
+
+.dets h2{
+    font-size: 3rem;
+    color:rgb(7, 250, 250);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.views:hover .dets{
+    top: 70%;
+}
+
+.footer{
+    min-height: 6vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.footer p span{
+    color: yellow;
+}
+@media only screen and (max-width: 1000px) {
+    .nav .list a{
+        padding: 0 1rem;
+        margin-left: 2rem;
+
+    }
+    .explore h2{
+        font-size: 2.5rem;
+    }
+    .types{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .types{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .views{
+        width: 700px;
+        height: 600px;
+    }
+
+    .explore{
+        width: 400px;
+        height: 450px;
+    }
+
+    .explore h2{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .list{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 60vh;
+        background: rgb(4, 77, 77);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1rem;
+        z-index: 5;
+        transform: translateX(100%);
+        transition: .5s ease-in-out;
+    }
+    .active{
+        transform: translateX(0%);
+    }
+    .nav .list a{
+        padding: 1rem .5rem;
+        border: 1px solid rgb(7, 250, 250);
+        margin: 1rem 0;
+        border-radius: .3rem;
+    }
+    .nav .list a:first-child{
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .types{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+    }
+    .views{
+        width: 500px;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .views{
+        width: 350px;
+        height: 600px;
+    }
+}

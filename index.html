@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain views</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="view">
+        <nav class="nav flex_row">
+            <div class="logo">
+                <a href="#">MountainView</a>
+            </div>
+            <ul class="list">
+                <a href="#">home</a>
+                <a href="#">explore</a>
+                <a href="#">about</a>
+                <a href="#">search</a>
+            </ul>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <div class="explore flex_col">
+            <h2>explore the Mountains and feel the emotions in them.</h2>
+            <p>it's no joke, try it out!</p>
+        </div>
+    </div>
+
+    <div class="types">
+        <div class="views">
+            <img src="./images/mt1.jpeg" alt="">
+            <div class="dets">
+                <h2>summer view</h2>
+            </div>
+        </div>
+        <div class="views">
+            <img src="./images/mt2.jpeg" alt="">
+            <div class="dets">
+                <h2>winter view</h2>
+            </div>
+        </div>
+        <div class="views">
+            <img src="./images/mt3.jpeg" alt="">
+            <div class="dets">
+                <h2>Mountain foggy view</h2>
+            </div>
+        </div>
+        <div class="views">
+            <img src="./images/mt4.jpeg" alt="">
+            <div class="dets">
+                <h2>spring view</h2>
+            </div>
+        </div>
+        <div class="views">
+            <img src="./images/mt5.jpeg" alt="">
+            <div class="dets">
+                <h2>snowy view</h2>
+            </div>
+        </div>
+        <div class="views">
+            <img src="./images/mt6.jpeg" alt="">
+            <div class="dets">
+                <h2>green veg view</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer flex_row">
+        <p>2021 &copy; all rights reserved. <span>@developerXan</span></p>
+    </div>
+
+    <script>
+        let burger = document.querySelector('.burger');
+        let list_items = document.querySelector('.list');
+        burger.onclick = () =>{
+            list_items.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
