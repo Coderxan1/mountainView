@@ -1,3 +1,3 @@
-# mountainView responsice website 
+# mountainView Responsive website 
 
 using Html, Css and Js
